@@ -35,6 +35,18 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+//results transition
+window.addEventListener('scroll', () => {
+    const containers = document.querySelectorAll('.before-after-container');
+
+    containers.forEach(container => {
+      const afterImg = container.querySelector('.after');
+      const rect = container.getBoundingClientRect();
+      const isVisible = rect.top < window.innerHeight - 600; // reveal slightly before fully visible
+
+      afterImg.style.opacity = isVisible ? 1 : 0;
+    });
+  });
 
 // mobile menu
 
