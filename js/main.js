@@ -1,6 +1,7 @@
 // FAQ accordian
 document.addEventListener('DOMContentLoaded', () => {
     const faqContainer = document.querySelector('.faq-content');
+    if (!faqContainer) return;
 
     faqContainer.addEventListener('click', (e) => {
         const groupHeader= e.target.closest('.faq-group-header');

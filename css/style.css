@@ -70,24 +70,72 @@ img {
 
 /* superHERO FN */
 .hero {
-    margin-bottom: 50 px;
+    margin-bottom: 50px;
 }
 
 .hero .container {
     background: url('../images/heroboardfinal.png')no-repeat;
     background-size: contain;
     background-position: center bottom;
-    height: 550px;
+    min-height: 780px;
+    height: auto;
+
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    padding-bottom: 120px;
 }
 
 .hero .hero-content {
-    width: 85%;
+	padding-top: 30px;
+	max-width: 1200px;
+	background: transparent;
+    border-radius: 20px;
+    padding: 28px;
+    display: inline-block;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
 }
 .hero .hero-text {
-    width: 50%;
+    width: 100%;
+    max-width: 600px;
     margin-bottom: 20px;
 }
+.hero .hero-buttons {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center; /* centers buttons */
+  align-items: center;
+}
 
+/*reliability*/
+.trust-strip {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    max-width: 530px;
+    align-items: center;
+}
+
+.trust-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #f4f4f6;
+    border-radius: 8px;
+    padding: 8px 14px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.trust-note {
+  margin-top: 10px;
+  color: #333;
+  opacity: 0.9;
+}
 /* Video*/
 
 .video {
@@ -247,7 +295,7 @@ img {
 }
 
 .footer i {
-    font-size: 1.5 rem;
+    font-size: 1.5rem;
     margin-right: 10px;
 }
 
@@ -285,7 +333,36 @@ img {
     padding: 0 15px;
     
 }
+/*commercial css*/
+.section-subtitle{
+text-align:center;
+max-width:700px;
+margin:10px auto 40px auto;
+color:#666;
+font-size:16px;
+}
+.service-details {
+  margin-top: 10px;
+  padding-left: 18px;
+  list-style: none;
+}
 
+.service-details li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #555;
+}
+
+/* Custom bullet */
+.service-details li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: #2b620b; /* your green brand color */
+  font-weight: bold;
+}
 /* Button for Quote Now FN*/
 .btn {
     display: inline-block;
@@ -445,7 +522,7 @@ html {
 }
 /*Media Queries (only pertains at the 960px mark andrew)*/
 
-@media (max-midth: 960px) {
+@media (max-width: 960px) {
     .text-xxl {
         font-size: 2.5rem;
     }
@@ -462,8 +539,10 @@ html {
     .hero .container {
         background: url('../images/heroboardmobile.png') no-repeat;
         background-size: 400px 450px;
-        background-position: bottom;
-        height: 770px;
+        background-position: center 125%;
+        min-height: 700px;
+		height: auto;
+		padding-bottom: 200px;
     }
     .hero .hero-content, .hero .hero-text {
         width: 100%;
@@ -474,6 +553,17 @@ html {
         display: block;
         WIDTH: 100%;
     }
+    
+    .trust-strip {
+  		justify-content: center;
+  		margin-bottom: 10px;
+  
+	}
+
+	.trust-item {
+  		width: calc(50% - 12px);
+  		justify-content: center;
+	}
 
     .testimonials .testimonials-heading {
         max-width: 100%;
