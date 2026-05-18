@@ -65,7 +65,8 @@ export const privacyContent: LegalPageContent = {
         `For privacy questions, SMS consent questions, or customer rights requests, contact ${companyLegalName}, DBA ${companyDba}, at ${contactEmail}.`
       ]
     }
-];
+]
+};
 
 export const termsContent: LegalPageContent = {
   eyebrow: "Terms & Conditions",
