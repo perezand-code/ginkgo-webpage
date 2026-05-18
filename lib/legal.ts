@@ -1,3 +1,24 @@
+export type LegalSection = {
+  title: string;
+  body?: string[];
+  bullets?: string[];
+};
+
+export type LegalPageContent = {
+  eyebrow: string;
+  title: string;
+  description: string;
+  updated: string;
+  canonicalPath: string;
+  highlights: string[];
+  sections: LegalSection[];
+};
+
+export const companyLegalName = "Ginkgo Property Solutions LLC";
+export const companyDba = "Ginkgo Pressure Washing";
+export const companyWebsite = "https://ginkgopressurewashing.com";
+export const contactEmail = "ginkgopressurewashing@gmail.com";
+export const serviceArea = "Fort Wayne, Bloomington, and surrounding Indiana service areas";
 export const privacyContent: LegalPageContent = {
       eyebrow: "Privacy Policy",
   title: "Privacy Policy for Ginkgo Property Solutions LLC",
@@ -65,7 +86,7 @@ export const privacyContent: LegalPageContent = {
         `For privacy questions, SMS consent questions, or customer rights requests, contact ${companyLegalName}, DBA ${companyDba}, at ${contactEmail}.`
       ]
     }
-]
+  ]
 };
 
 export const termsContent: LegalPageContent = {
