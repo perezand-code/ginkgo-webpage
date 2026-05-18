@@ -1,12 +1,16 @@
 "use client";
 
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 import CTAButton from "@/components/CTAButton";
 import { GinkgoMark } from "@/components/Icons";
 import { navLinks, quoteUrl } from "@/lib/constants";
 import { getAnimeModule, runAnime } from "@/lib/anime";
 
 export default function Footer() {
+  const pathname = usePathname();
+  const homeHref = (href: string) => (pathname === "/" ? href : `/${href}`);
+
   useEffect(() => {
     const morph = async () => {
       const mod = await getAnimeModule();
@@ -71,15 +75,21 @@ export default function Footer() {
             <p className="text-sm font-black uppercase tracking-[0.18em] text-gold">Explore</p>
             <div className="mt-5 grid gap-3">
               {navLinks.slice(1, 6).map((link) => (
-                <a key={link.href} href={link.href} className="text-white/72 transition hover:text-gold">
+                <a key={link.href} href={homeHref(link.href)} className="text-white/72 transition hover:text-gold">
                   {link.label}
                 </a>
               ))}
-              <a href="#services" className="text-white/72 transition hover:text-gold">
+              <a href={homeHref("#services")} className="text-white/72 transition hover:text-gold">
                 Residential Services
               </a>
-              <a href="#commercial" className="text-white/72 transition hover:text-gold">
+              <a href={homeHref("#commercial")} className="text-white/72 transition hover:text-gold">
                 Commercial Services
+              </a>
+              <a href="/privacy" className="text-white/72 transition hover:text-gold">
+                Privacy Policy
+              </a>
+              <a href="/terms&cond" className="text-white/72 transition hover:text-gold">
+                Terms & Conditions
               </a>
             </div>
           </div>
@@ -91,10 +101,10 @@ export default function Footer() {
               <a href={quoteUrl} className="transition hover:text-gold">
                 Online quote tool
               </a>
-              <a href="https://www.instagram.com/ginkgo.clean/" className="transition hover:text-gold">
+              <a href="#" className="transition hover:text-gold">
                 Instagram
               </a>
-              <a href="https://www.facebook.com/p/Ginkgo-Pressure-Washing-61576586610723/" className="transition hover:text-gold">
+              <a href="#" className="transition hover:text-gold">
                 Facebook
               </a>
             </div>
