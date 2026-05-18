@@ -1,4 +1,17 @@
 export const privacyContent: LegalPageContent = {
+      eyebrow: "Privacy Policy",
+  title: "Privacy Policy for Ginkgo Property Solutions LLC",
+  description:
+    "How Ginkgo Property Solutions LLC, DBA Ginkgo Pressure Washing, collects, uses, protects, and handles customer information, including SMS consent.",
+  updated: "May 17, 2026",
+  canonicalPath: "/privacy",
+  highlights: [
+    "SMS opt-in is optional and never required to request a quote or buy services.",
+    "Phone numbers and SMS consent are never sold or shared for marketing purposes.",
+    "Customers can reply STOP to opt out or HELP for assistance at any time."
+  ],
+  sections: [
+    {
       title: "7. No Sale or Sharing of Phone Numbers",
       body: [
         "We do not sell, rent, trade, or share customer phone numbers or SMS consent data with third parties for their marketing or promotional purposes.",
