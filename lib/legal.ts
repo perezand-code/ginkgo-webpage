@@ -1,4 +1,4 @@
-export const legalSections = [
+export const privacyContent: LegalPageContent = {
 {
       title: "7. No Sale or Sharing of Phone Numbers",
       body: [
