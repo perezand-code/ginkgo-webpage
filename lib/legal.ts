@@ -1,4 +1,5 @@
-    {
+export const legalSections = [
+{
       title: "7. No Sale or Sharing of Phone Numbers",
       body: [
         "We do not sell, rent, trade, or share customer phone numbers or SMS consent data with third parties for their marketing or promotional purposes.",
